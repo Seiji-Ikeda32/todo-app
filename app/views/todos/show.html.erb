@@ -1,0 +1,7 @@
+<p>タイトル <%= @todo.title %></p>
+<p>内容 <%= @todo.content %></p>
+<p>期限 <%= @todo.due %></p>
+<p>製作者 <%= @todo.name %></p>
+<%= link_to '一覧に戻る', todos_path %>
+<%= link_to 'このタスクを編集する', edit_todo_path(@todo) %>
+<%= link_to 'このタスクを削除する', @todo, method: :delete, data: { confirm: '本当に削除してよろしいですか？' } %>

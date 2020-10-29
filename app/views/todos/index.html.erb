@@ -1,0 +1,14 @@
+<% @todos.each do |todo| %>
+　<div class="card" style="width: 18rem;">
+  　<div class="card-body">
+   　<h6 class="card-title"><%= link_to todo.id, todo %> : タイトル <%= todo.title %></h6>
+  　</div>
+  　<ul class="list-group list-group-flush">
+     <li class="list-group-item">内容： <%= todo.content %></li>
+     <li class="list-group-item">期限：<%= todo.due %></li>
+     <li class="list-group-item">製作者： <%= todo.name %></li>
+  　</ul>
+　</div>
+<% end %>
+
+<%= link_to '新規タスクの作成', new_todo_path %>
